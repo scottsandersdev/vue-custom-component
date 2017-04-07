@@ -1,29 +1,37 @@
 <template>
-  <div id="my-app">
+  <div class='my-app' :class='{ active: btnTriggered }' @click.prevent='onClick'>
     <p>{{msg}}</p>
   </div>
 </template>
 
 <script>
-
 export default {
-  name: 'app',
   data: function() {
     return {
-      msg: 'vue custom component working'
+      msg: 'vue custom component working',
+      btnTriggered: false
+    }
+  },
+  methods: {
+    onClick() {
+      this.btnTriggered = !this.btnTriggered;
     }
   }
-
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
+.my-app {
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  -webkit-font-smoothing: antialiased;
   color: #2c3e50;
+  cursor: pointer;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   margin-top: 60px;
+  text-align: center;
+}
+
+.active {
+  color: red;
 }
 </style>

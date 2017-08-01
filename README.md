@@ -1,5 +1,7 @@
-# vue-custom-component
-testing out vue custom component library
+# vue-custom-element
+Test using vue-custom-element library 
+
+:link: https://karol-f.github.io/vue-custom-element/#/demos/basic
 
 ### Build Setup
 
